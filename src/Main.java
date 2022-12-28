@@ -1,20 +1,19 @@
 public class Main {
     public static void main(String[] args) {
 
-        int balans = 100; //сумма баланса
-        int amount = 100; //сумма пополнения
+        int balansstart = 100; //сумма баланса
+        int amount = 1100; //сумма пополнения
         int percent; // процент бонуса
-        if (amount >= 1000)
-        {
+        if (amount > 1000) {
             percent = 1;
-        } else
-        {
+        } else {
             percent = 0;
         }
         int bonus = (amount * percent) / 100;
-        balans = balans + amount + bonus;
+        int balansfinish;
+        balansfinish = balansstart + amount + bonus;
 
-        System.out.println(balans); //сумма баланса
+        System.out.println(balansfinish); //сумма баланса
         System.out.println(bonus); // сумма бонусов
 
     }
